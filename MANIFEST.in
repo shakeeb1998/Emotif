@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include emotif *.css
+recursive-include emotif *.csv
+recursive-include emotif *.html
+recursive-include emotif *.ico
+recursive-include emotif *.js
+recursive-include emotif *.json
+recursive-include emotif *.md
+recursive-include emotif *.png
+recursive-include emotif *.py
+recursive-include emotif *.svg
+recursive-include emotif *.txt
+recursive-exclude emotif *.pyc
