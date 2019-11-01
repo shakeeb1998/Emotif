@@ -116,8 +116,14 @@ def increase_resolution():
         return output
 
     imgb64=SuperRes('/home/frappe/frappe-bench/apps/emotif/emotif/ESRGAN/LR/baboon.png',img)
-
-    return "http://127.0.0.1:8000/files/shakku.png"
+    retval, buffer = cv2.imencode('.png', imgb64)
+    print('here1')
+    jpg_as_text = base64.b64encode(buffer)
+    print('here2')
+    help = str(jpg_as_text.decode())
+    print('here3')
+    help = 'data:image/png;base64,' + help
+    return help
 
 
 @frappe.whitelist(allow_guest=True)
@@ -157,4 +163,4 @@ def test1():
 
 @frappe.whitelist(allow_guest=True)
 def test2():
-    return 'file updated'
+    return 'file updated  iuoioid'
