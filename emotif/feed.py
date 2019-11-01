@@ -157,6 +157,6 @@ def test():
     print('shakeeb pot')
     return 'jhh'
 
-
+@frappe.whitelist(allow_guest=True)
 def test2():
     return 'file updated'
