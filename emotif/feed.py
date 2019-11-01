@@ -121,9 +121,7 @@ def increase_resolution():
 
 
 @frappe.whitelist(allow_guest=True)
-def test():
-
-
+def test1():
     def SuperRes(path):
         model_path = '/home/frappe/frappe-bench/apps/emotif/emotif/ESRGAN/models/RRDB_ESRGAN_x4.pth'  # models/RRDB_ESRGAN_x4.pth OR models/RRDB_PSNR_x4.pth
         print('device loading')
